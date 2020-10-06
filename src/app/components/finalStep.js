@@ -4,7 +4,7 @@ import "./finalStep.css"
 
 export default class BasicConfiguration extends Component {
   isValidated() {
-    this.props.onSave({ pato: true })
+    this.props.onSave(this.props.level)
   }
 
   render() {

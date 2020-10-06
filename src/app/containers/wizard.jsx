@@ -1,43 +1,29 @@
-import React, { PureComponent } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { useState } from 'react';
 import Wizard from '../components/wizard';
-import * as actions from '../actions/wizard';
-import { isDesktop } from '../config';
 import downloadLevel from '../helpers/downloadLevel';
+import {Categories} from "../components/initialSolution/pilas-bloques-blocks";
 
-class WizardContainer extends PureComponent {
+const DEFAULT_LEVEL = {
+  name: "",
+  category: "",
+  advice: "",
+  columns: 3,
+  rows: 3,
+  initialSolutionXML: "",
+  categoriesPermitted: Categories.map((category) => category.name),
+  scene: {
+    type: "duba"
+  },
+  grids: [],
+  expectation: ""
+};
 
-  componentWillMount() {
-    this.props.actions.fetchMe();
-  }
+const WizardContainer  = () => {
+  const [state, setState] = useState({ level: DEFAULT_LEVEL });
+  const onUpdateLevel = (updatedLevel) => {
+    setState({ level: { ...(state.level), ...updatedLevel } });
+  };
+  return (<Wizard {...state} onSave={downloadLevel} onUpdateProps={onUpdateLevel}/>);
+};
 
-  onSave() {
-    const { level, user } = this.props;
-    if(isDesktop || !user.fullPermissions)
-      downloadLevel(level)
-    else
-      this.props.actions.save(level);
-  }
-
-  onUpdateProps(props) {
-    this.props.actions.updateLevelProps(props);
-  }
-
-  render() {
-    return (
-        <Wizard {...this.props} onSave={() => this.onSave()} onUpdateProps={props => this.onUpdateProps(props)}/>
-    );
-  }
-}
-function mapStateToProps({ level: { level, isLoading, success }, commons: { user } }) {
-    return { level, isLoading, user, success };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(WizardContainer);
+export default WizardContainer;
