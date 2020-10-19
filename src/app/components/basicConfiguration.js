@@ -10,9 +10,9 @@ export default class BasicConfiguration extends Component {
   }
 
   isValidated() {
-    const userImput = this._grabUserInput();
-    this.props.onUpdateProps(userImput);
-    return !_.some([userImput.name, userImput.category], _.isEmpty);
+    const userInput = this._grabUserInput();
+    this.props.onUpdateProps(userInput);
+    return !_.some([userInput.name, userInput.category], _.isEmpty);
   }
 
   _grabUserInput() {

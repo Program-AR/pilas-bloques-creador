@@ -8,3 +8,15 @@ Primera versión desarrollada a partir del proyecto final de la carrera Ingenier
 - Gabriel ...
 
 ¡Gracias por todo!
+
+
+### Instrucciones para la ejecución
+
+Para instalar las dependencias del proyecto: `npm install`
+
+Para ejecutar la aplicación: `npm start`
+
+La aplicación se levanta en `http://localhost:3001/`
+
+Para poder importar desafíos en Pilas Bloques, ir a `config/environment.js` y setear `enableChallengeCreator` 
+en `true` antes de ejecutar la aplicación.

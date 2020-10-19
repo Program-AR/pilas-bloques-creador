@@ -1,0 +1,6 @@
+/public
+/src
+.env
+.gitignore
+.nvmrc
+README.md

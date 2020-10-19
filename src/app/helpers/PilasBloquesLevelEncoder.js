@@ -50,11 +50,11 @@ export default class PilasBloquesLevelEncoder {
 
       return encodedRows.join();
     };
-    //const categories = levelToEncode.categoriesPermitted;
-    //pbBlocks.make();
-    //const bloques = toolboxBuilder.bloquesPermitidos(pbBlocks.types(),categories).map(bloque => bloque.bloque);
+    const categories = levelToEncode.categoriesPermitted;
+    pbBlocks.make();
+    const bloques = toolboxBuilder.bloquesPermitidos(pbBlocks.types(),categories).map(bloque => bloque.bloque);
 
-    const bloques = levelToEncode.scene.blocks;
+    //const bloques = levelToEncode.scene.blocks;
 
     const encodedGrids = `"${encodeGrid(levelToEncode.grids[0])}"`;
 

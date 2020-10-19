@@ -1,3 +1,3 @@
-import _ from "lodash";
+import { range } from "lodash";
 
-export const closedRangeFrom1 = (max) => _.range(1, max + 1);
+export const closedRangeFrom1 = (max) => range(1, max + 1);

@@ -1,59 +1,26 @@
 {
-  "name": "proyecto-final-2019-pilasbloques",
+  "name": "creador-de-desafios-pilasbloques",
   "version": "1.0.0",
-  "description": "proyecto-final-2019-PilasBloques",
-  "main": "public/electron.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "react-scripts test --env=node",
-    "dev": "concurrently --kill-others \"(cd src/server && npm start)\" \"npm start\"",
-    "start-desktop": "electron .",
-    "postinstall": "electron-builder install-app-deps",
-    "preelectron-pack": "npm run build",
-    "electron-pack": "electron-builder"
+    "test": "react-scripts test --env=node"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nrainhart/proyecto-final-2019-PilasBloques.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nrainhart/proyecto-final-2019-PilasBloques/issues"
-  },
-  "homepage": "./",
   "devDependencies": {
-    "concurrently": "^4.1.1",
-    "electron": "^6.0.2",
-    "electron-builder": "^21.2.0",
     "react-scripts": "^3.0.0"
   },
   "dependencies": {
     "blockly": "^2.20190722.1",
-    "bluebird": "^3.5.5",
-    "electron-is-dev": "^1.1.0",
     "lodash": "^4.17.14",
-    "moment": "^2.24.0",
-    "moment-with-locales-es6": "^1.0.1",
-    "promise": "^8.0.3",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.5",
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.1",
     "react-scrollable-list": "^1.2.0",
-    "react-select": "^3.0.5",
-    "react-stars": "^2.2.5",
     "react-stepzilla": "^6.0.0",
     "react-tooltip": "^3.11.1",
-    "redux": "^4.0.1",
-    "redux-observable": "^0.14.1",
-    "request-promise": "^4.2.4",
-    "rxjs": "^5.3.0",
     "styled-components": "^4.3.2"
   },
   "browserslist": {

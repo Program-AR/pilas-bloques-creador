@@ -6,7 +6,6 @@ import fetchAsset from '../helpers/fetchAsset';
 import './selectLevelType.css';
 import ReactTooltip from 'react-tooltip';
 
-
 export default ({ level: { scene, rows, columns }, onUpdateProps }) => {
   const pickAllPrizesType = {
     scene: Scene.DubaScene,
