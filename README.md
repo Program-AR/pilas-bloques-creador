@@ -3,6 +3,9 @@
 
 Hi! :vulcan_salute: This is a project related to [Pilas Bloques](https://pilasbloques.program.ar) :heart:. In that project's repository you'll find the [contribution guidelines](https://github.com/Program-AR/pilas-bloques-app/blob/develop/CONTRIBUTING_en.md) and the [code of conduct](https://github.com/Program-AR/pilas-bloques-app/blob/develop/CODE_OF_CONDUCT_en.md) which also apply to this project.
 
+### NOTA DE DEPRECACIÓN
+Este repositorio ya no es válido. El repositorio principal de Pilas Bloques ya tiene incluido el creador de desafíos.
+
 ### Creador de Desafíos para Pilas Bloques
 
 Primera versión desarrollada a partir del proyecto final de la carrera Ingeniería en Sistemas de Información de la Universidad Tecnológica Nacional de:
